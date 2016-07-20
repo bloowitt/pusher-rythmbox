@@ -1,5 +1,6 @@
 body {
   background: black;
+  color: white;
 }
 
 #rythmBoxTable {
@@ -24,25 +25,6 @@ body {
 
 #rythmBoxTable tr.selected td {
   border: 1px solid #555;
-}
-
-#pressedStatus {
-    width: 10em;
-    margin: 1em 5em;
-    border: 1px solid white;
-    padding-top: 0.2em;
-    padding-bottom: 0.2em;
-    padding-left: 5em;
-}
-
-
-#pressedStatus.connected {
-    background-color: gray;
-    color: white;
-}
-
-#pressedStatus.enabled {
-    background-color: green;
 }
 
 .instrument {
