@@ -1,0 +1,58 @@
+body {
+  background: black;
+}
+
+#rythmBoxTable {
+    width:100%;
+    border: 1px solid white;
+    color: white;
+}
+
+#rythmBoxTable td {
+  border: 1px solid white;
+}
+
+#rythmBoxTable .name {
+  padding-left: 1em;
+  max-width: 2em;
+}
+
+#rythmBoxTable tr.selected {
+  background-color: #79A17A;
+  color: black;
+}
+
+#rythmBoxTable tr.selected td {
+  border: 1px solid #555;
+}
+
+#pressedStatus {
+    width: 10em;
+    margin: 1em 5em;
+    border: 1px solid white;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    padding-left: 5em;
+}
+
+
+#pressedStatus.connected {
+    background-color: gray;
+    color: white;
+}
+
+#pressedStatus.enabled {
+    background-color: green;
+}
+
+.instrument {
+  height:6em;
+}
+
+.beat.active {
+  background-color: yellow;
+}
+
+.beat.sound {
+  background-color: white;
+}

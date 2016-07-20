@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script
+			  src="https://code.jquery.com/jquery-3.1.0.min.js"
+			  integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="
+			  crossorigin="anonymous"></script>
+  <script src="https://js.pusher.com/3.1/pusher.min.js"></script>
+  <script src="js/rythmbox.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="css/main.css"></link>
+  <title>Push the button</title>
+  <style>body {
+    font-size:1.5em
+  }</style>
+</head>
+<body>
+  <br />
+  <table id="rythmBoxTable">
+    <tr class="instrument 0" id="bass">
+      <td class="name">Bass drum</td>
+      <td class="beat 1"><audio src="audio/kick-acoustic01.wav" /></td>
+      <td class="beat 2"><audio src="audio/kick-acoustic01.wav" /></td>
+      <td class="beat 3"><audio src="audio/kick-acoustic01.wav" /></td>
+      <td class="beat 4"><audio src="audio/kick-acoustic01.wav" /></td>
+      <td class="beat 5"><audio src="audio/kick-acoustic01.wav" /></td>
+      <td class="beat 6"><audio src="audio/kick-acoustic01.wav" /></td>
+      <td class="beat 7"><audio src="audio/kick-acoustic01.wav" /></td>
+      <td class="beat 8"><audio src="audio/kick-acoustic01.wav" /></td>
+      <td class="beat 9"><audio src="audio/kick-acoustic01.wav" /></td>
+      <td class="beat 10"><audio src="audio/kick-acoustic01.wav" /></td>
+      <td class="beat 11"><audio src="audio/kick-acoustic01.wav" /></td>
+      <td class="beat 12"><audio src="audio/kick-acoustic01.wav" /></td>
+      <td class="beat 13"><audio src="audio/kick-acoustic01.wav" /></td>
+      <td class="beat 14"><audio src="audio/kick-acoustic01.wav" /></td>
+      <td class="beat 15"><audio src="audio/kick-acoustic01.wav" /></td>
+      <td class="beat 16"><audio src="audio/kick-acoustic01.wav" /></td>
+    </tr>
+    <tr class="instrument 1" id="snare">
+      <td class="name">Snare</td>
+      <td class="beat 1"><audio src="audio/snare-analog.wav" /></td>
+      <td class="beat 2"><audio src="audio/snare-analog.wav" /></td>
+      <td class="beat 3"><audio src="audio/snare-analog.wav" /></td>
+      <td class="beat 4"><audio src="audio/snare-analog.wav" /></td>
+      <td class="beat 5"><audio src="audio/snare-analog.wav" /></td>
+      <td class="beat 6"><audio src="audio/snare-analog.wav" /></td>
+      <td class="beat 7"><audio src="audio/snare-analog.wav" /></td>
+      <td class="beat 8"><audio src="audio/snare-analog.wav" /></td>
+      <td class="beat 9"><audio src="audio/snare-analog.wav" /></td>
+      <td class="beat 10"><audio src="audio/snare-analog.wav" /></td>
+      <td class="beat 11"><audio src="audio/snare-analog.wav" /></td>
+      <td class="beat 12"><audio src="audio/snare-analog.wav" /></td>
+      <td class="beat 13"><audio src="audio/snare-analog.wav" /></td>
+      <td class="beat 14"><audio src="audio/snare-analog.wav" /></td>
+      <td class="beat 15"><audio src="audio/snare-analog.wav" /></td>
+      <td class="beat 16"><audio src="audio/snare-analog.wav" /></td>
+    </tr>
+    <tr class="instrument 2" id="chaxton">
+      <td class="name">Chaxton</td>
+      <td class="beat 1"><audio src="audio/hihat-plain.wav" /></td>
+      <td class="beat 2"><audio src="audio/hihat-plain.wav" /></td>
+      <td class="beat 3"><audio src="audio/hihat-plain.wav" /></td>
+      <td class="beat 4"><audio src="audio/hihat-plain.wav" /></td>
+      <td class="beat 5"><audio src="audio/hihat-plain.wav" /></td>
+      <td class="beat 6"><audio src="audio/hihat-plain.wav" /></td>
+      <td class="beat 7"><audio src="audio/hihat-plain.wav" /></td>
+      <td class="beat 8"><audio src="audio/hihat-plain.wav" /></td>
+      <td class="beat 9"><audio src="audio/hihat-plain.wav" /></td>
+      <td class="beat 10"><audio src="audio/hihat-plain.wav" /></td>
+      <td class="beat 11"><audio src="audio/hihat-plain.wav" /></td>
+      <td class="beat 12"><audio src="audio/hihat-plain.wav" /></td>
+      <td class="beat 13"><audio src="audio/hihat-plain.wav" /></td>
+      <td class="beat 14"><audio src="audio/hihat-plain.wav" /></td>
+      <td class="beat 15"><audio src="audio/hihat-plain.wav" /></td>
+      <td class="beat 16"><audio src="audio/hihat-plain.wav" /></td>
+    </tr>
+    <tr class="instrument 3" id="cymbal">
+      <td class="name">Cymbal</td>
+      <td class="beat 1"><audio src="audio/crash-tape.wav" /></td>
+      <td class="beat 2"><audio src="audio/crash-tape.wav" /></td>
+      <td class="beat 3"><audio src="audio/crash-tape.wav" /></td>
+      <td class="beat 4"><audio src="audio/crash-tape.wav" /></td>
+      <td class="beat 5"><audio src="audio/crash-tape.wav" /></td>
+      <td class="beat 6"><audio src="audio/crash-tape.wav" /></td>
+      <td class="beat 7"><audio src="audio/crash-tape.wav" /></td>
+      <td class="beat 8"><audio src="audio/crash-tape.wav" /></td>
+      <td class="beat 9"><audio src="audio/crash-tape.wav" /></td>
+      <td class="beat 10"><audio src="audio/crash-tape.wav" /></td>
+      <td class="beat 11"><audio src="audio/crash-tape.wav" /></td>
+      <td class="beat 12"><audio src="audio/crash-tape.wav" /></td>
+      <td class="beat 13"><audio src="audio/crash-tape.wav" /></td>
+      <td class="beat 14"><audio src="audio/crash-tape.wav" /></td>
+      <td class="beat 15"><audio src="audio/crash-tape.wav" /></td>
+      <td class="beat 16"><audio src="audio/crash-tape.wav" /></td>
+    </tr>
+  </table>
+  <div id="pressedStatus">Pressed</div>
+  <script type="text/javascript">
+    window.rythmBox.controller.setup("rythmBoxTable");
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+<td class="beat 7"></td>
