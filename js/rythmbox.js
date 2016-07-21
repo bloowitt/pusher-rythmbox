@@ -36,7 +36,7 @@ window.rythmBox.controller = (function(element) {
 
   var setup = function(pusherAPIId, buttonId) {
     connectToPusher('57cad681aa44cad36271');
-    startListening('button');
+    startListening('button-143');
     $("#rythmBoxTable tr." + selectedInstrument).addClass("selected");
     prevTime = new Date().getTime();
     requestAnimationFrame(simulationFrame);
